@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sana | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Shaik Sana Samreen</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button id="theme-toggle" class="theme-toggle">🌙</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content reveal">
+    <img src="images/img3.jpg" class="profile-pic" alt="Sana">
+    <h1>SHAIK SANA SAMREEN</h1>
+    <h2 class="role">Frontend Developer</h2>
+    <p class="tagline">Learning. Building. Improving.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section fade">
+  <h2>About Me</h2>
+  <p class="text">
+    Currently working as a Research Intern under the project of MeitY, GoI.
+	I’m a final-year BTech student with hands-on experience in building academic and practical projects across cryptography, automation, data analysis, and cloud technologies. 
+	My learning approach is simple: Understand the fundamentals deeply and apply them through projects.
+  </p>
+</section>
+
+<!-- SKILLS / QUICK FACTS -->
+<section id="skills" class="section light fade">
+  <h2>Quick Facts</h2>
+
+  <div class="cards">
+
+    <div class="card flip-card">
+      <div class="card-inner">
+        <div class="card-front">HTML, CSS, JavaScript</div>
+        <div class="card-back">Building responsive and clean UI layouts.</div>
+      </div>
+    </div>
+
+    <div class="card flip-card">
+      <div class="card-inner">
+        <div class="card-front">UI & Motion</div>
+        <div class="card-back">Interested in animations and user experience.</div>
+      </div>
+    </div>
+
+    <div class="card flip-card">
+      <div class="card-inner">
+        <div class="card-front">Project-Based Learning</div>
+        <div class="card-back">Learning concepts by implementing projects.</div>
+      </div>
+    </div>
+
+    <div class="card flip-card">
+      <div class="card-inner">
+        <div class="card-front">AI & ML</div>
+        <div class="card-back">Basic exposure to ML concepts and use-cases.</div>
+      </div>
+    </div>
+
+    <div class="card flip-card">
+      <div class="card-inner">
+        <div class="card-front">Cryptography</div>
+        <div class="card-back">Exploring digital signatures & PQC basics.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section fade">
+  <h2>Projects</h2>
+
+  <div class="projects">
+    <div class="project-card">
+      <h3>Countries Search</h3>
+      <p>Built a responsive web application that allows users to search and explore countries using real-time data..</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Secure Digital Signatures</h3>
+      <p>Studied Schnorr signatures and post-quantum cryptography concepts.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Automation & RAG Systems</h3>
+      <p>Worked on automation pipelines and AI-assisted retrieval systems.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section fade">
+  <h2>Gallery</h2>
+
+  <div class="gallery">
+    <div class="img-box">
+      <img src="images/img1.png">
+      <span>UI Practice</span>
+    </div>
+    <div class="img-box">
+      <img src="images/img2.png">
+      <span>Design Inspiration</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section light fade">
+  <h2>Contact</h2>
+  <p class="text">📞 +91 7981466226</p>
+  <p class="text">📧 shaiksanasamreen28@gmail.com</p>
+</section>
+
+<!-- JS -->
+<script>
+/* Dark mode */
+const toggle = document.getElementById("theme-toggle");
+toggle.onclick = () => {
+  document.body.classList.toggle("dark");
+  toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+};
+
+/* Scroll animation */
+const faders = document.querySelectorAll(".fade");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("show");
+  });
+}, { threshold: 0.2 });
+
+faders.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
