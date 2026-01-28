@@ -166,3 +166,42 @@ body.dark .navbar a { color:#e5e7eb; }
 body.dark .light { background:#14161c; }
 body.dark .card-front,
 body.dark .project-card { background:#1c1f26; color:#e5e7eb; }
+
+
+
+/* PROJECT LINKS (Live Demo + GitHub) */
+.project-links {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 8px 16px;
+  background: #667eea;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.btn.outline {
+  background: transparent;
+  color: #667eea;
+  border: 1px solid #667eea;
+}
+
+/* Dark mode support */
+body.dark .btn.outline {
+  color: #e5e7eb;
+  border-color: #e5e7eb;
+}
+
+
